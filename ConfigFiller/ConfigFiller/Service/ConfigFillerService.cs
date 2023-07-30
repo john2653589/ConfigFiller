@@ -11,7 +11,6 @@ namespace Rugal.ConfigFiller.Service
         {
             Configuration = _Configuration;
         }
-
         public string Get(string Key)
         {
             var Result = Configuration[Key];
@@ -21,11 +20,10 @@ namespace Rugal.ConfigFiller.Service
 
             var ReplaceValues = Regex
                 .Matches(Result, Pattern)
-                .Select(Item => Item.Groups)
                 .Select(Item =>
                 {
-                    var ReplaceKey = Item[0].Value;
-                    var SplitKey = Item[1].Value;
+                    var ReplaceKey = Item.Groups[0].Value;
+                    var SplitKey = Item.Groups[1].Value;
 
                     var GetConfig = Configuration;
                     var SplitArray = SplitKey.Split(':');
