@@ -11,6 +11,7 @@
 		<AssemblyVersion>1.0.1</AssemblyVersion>
 		<FileVersion>$(AssemblyVersion)</FileVersion>
 		<Version>$(AssemblyVersion)</Version>
+		<Authors>Rugal</Authors>
 	</PropertyGroup>
 
 	<ItemGroup>
